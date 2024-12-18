@@ -1,8 +1,8 @@
 print('\nДобро пожаловать в игру Отгадай число!')
 print('\nЯ загадал натуральное число из диапазона от 1 до 100.')
 print('\nПостарайтесь отгадать его за минимальное число попыток.\n')
-import random
-the_number = random.randint(1,100)
+import random import randint 
+the_number = randint(1,100)
 tries = 1
 while tries < 100:
     tries += 1
