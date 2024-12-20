@@ -1,23 +1,24 @@
-print('\nДобро пожаловать в игру Отгадай число!')
-print('\nЯ загадал натуральное число из диапазона от 1 до 100.')
-print('\nПостарайтесь отгадать его за минимальное число попыток.\n')
-from random import randint 
-the_number = randint(1,100)
+print("\nДобро пожаловать в игру Отгадай число!")
+print("\nЯ загадал натуральное число из диапазона от 1 до 100.")
+print("\nПостарайтесь отгадать его за минимальное число попыток.\n")
+from random import randint
+
+the_number = randint(1, 100)
 tries = 1
 while tries < 100:
     tries += 1
-    guess = int(input('Ваше предположение: '))
+    guess = int(input("Ваше предположение: "))
     if guess < the_number:
-        print('Больше...')
+        print("Больше...")
     elif guess > the_number:
-            print('Меньше...')
+        print("Меньше...")
     else:
         guess == the_number
-        print('Юху, Вы отгадали это и правда: ', the_number)
-        print('Вы сделали', tries, 'попыток')
+        print("Юху, Вы отгадали это и правда: ", the_number)
+        print("Вы сделали", tries, "попыток")
     if tries == 5 and guess != the_number:
-        print('Увы, Вы проиграли. Начните заново')
+        print("Увы, Вы проиграли. Начните заново")
         break
-            
-    
-input('\nНажмите Enter для выхода')
+
+
+input("\nНажмите Enter для выхода")
